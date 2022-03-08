@@ -1,0 +1,19 @@
+<form class="example-form" [formGroup]="form" (ngSubmit)="submit()">
+  <input-autocomplete formControlName="pokemon"
+    placeholder="Pokemon's name"
+    [options]="pokemons$ | async">
+  </input-autocomplete>
+  <input-autocomplete formControlName="swCharacter"
+    placeholder="SW character's name"
+    lengthToTriggerSearch="2"
+    [options]="swCharacters$ | async">
+  </input-autocomplete>
+  <div>
+    <button mat-raised-button color="primary">submit</button>
+  </div>
+</form>
+
+
+<!-- Copyright 2019 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
